@@ -2,18 +2,11 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const unsigned char	*e;
+	size_t	len;
 
-	e = (const unsigned char *)s;
-	while (*e)
-		e++;
-	while (e > (const unsigned char *)s)
-	{
-		if (*e == (unsigned char)c)
-			return ((char *)e);
-		e--;
-	}
-	if (*e == (unsigned char)c)
-		return ((char *)e);
+	len = ft_strlen(s) + 1;
+	while (len--)
+		if ((unsigned char)s[len] == (unsigned char)c)
+			return ((char *)&s[len]);
 	return (NULL);
 }

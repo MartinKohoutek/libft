@@ -20,3 +20,21 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	*p = '\0';
 	return (res);
 }
+
+// #include <stdio.h>
+
+// static char	to_upper(unsigned int i, char c)
+// {
+// 	(void)i;
+// 	return (ft_toupper(c));
+// }
+
+// int	main(void)
+// {
+// 	char	*str;
+
+// 	str = ft_strmapi("Hello, World! 42", to_upper);
+// 	printf("Result: %s\n", str);
+// 	free(str);
+// 	return (0);
+// }
